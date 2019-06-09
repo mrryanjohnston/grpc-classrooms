@@ -16,6 +16,10 @@ looking at `classroom_student` objects.
 
 `students` are served from models in the `student-profiles` rails application.
 
+This is not the most efficient way to do this; you'll notice there are many
+calls to the database this way. Consider when you implement this that you'll
+want to batch your requests somehow to the two microservices.
+
 ## Setup
 
 You'll need ruby version `2.6.3`. Install the dependencies:
