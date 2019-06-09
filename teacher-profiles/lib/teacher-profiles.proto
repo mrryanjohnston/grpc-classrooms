@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service TeacherProfiles {
+  rpc Find (TeacherFindRequest) returns (TeacherProfile) {}
+  rpc Where (TeacherWhereRequest) returns (TeacherProfile) {}
+}
+
+message TeacherFindRequest {
+  int32 id = 1;
+}
+
+message TeacherWhereRequest {
+  string name = 1;
+}
+
+message TeacherProfile {
+  int32 id = 1;
+  string name = 2;
+}

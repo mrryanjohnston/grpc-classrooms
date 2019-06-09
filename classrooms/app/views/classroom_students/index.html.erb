@@ -1,0 +1,25 @@
+<h1>Listing Classroom Students</h1>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Classroom Name</th>
+      <th>Student Name</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @classroom_students.each do |classroom_student| %>
+      <tr>
+        <td><%= classroom_student.id %></td>
+        <td><%= classroom_student.classroom.name %></td>
+        <td><%= classroom_student.student.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ 
+<br>
+ 
+<%= link_to "New classroom student", new_classroom_student_path %>
