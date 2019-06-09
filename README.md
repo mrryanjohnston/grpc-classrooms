@@ -27,10 +27,13 @@ You'll need ruby version `2.6.3`. Install the dependencies:
 ```bash
 cd classrooms
 bundle install
+rails db:drop db:create db:migrate db:seed
 cd ../student-profiles
 bundle install
+rails db:drop db:create db:migrate db:seed
 cd ../teacher-profiles
 bundle install
+rails db:drop db:create db:migrate db:seed
 ```
 
 ## How To Run
